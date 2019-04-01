@@ -24,6 +24,13 @@
               :max-rows="6"
               class="margin-xs"
             />
+            <b-form-textarea
+              v-model="caption1"
+              placeholder="land location"
+              :rows="3"
+              :max-rows="6"
+              class="margin-xs"
+            />
             <b-button
               class="margin-xs"
               variant="secondary"
@@ -76,6 +83,7 @@ export default {
     return {
       buffer: '',
       caption: '',
+      caption1:'',
     };
   },
   methods: {
@@ -107,11 +115,14 @@ export default {
       alert('Uploading on IPFS...');
       this.$root.loading = true;
       let imgHash;
-
+      console.log("DESC:",this.caption);
+      console.log("LOC:",this.caption1);
+      var dataObj ="{'desc':'"+this.caption+"','location':'"+this.caption1+"'}";
+      console.log("FINAL : ",dataObj);
       ipfs.add(this.buffer)
         .then((hashedImg) => {
           imgHash = hashedImg[0].hash;
-          return this.convertToBuffer(this.caption);
+          return this.convertToBuffer(dataObj);
         }).then(bufferDesc => ipfs.add(bufferDesc)
           .then(hashedText => hashedText[0].hash)).then((textHash) => {
           this.$root.contract.methods
@@ -135,7 +146,7 @@ export default {
      * are filled before submission.
      */
     handleOk() {
-      if (!this.buffer || !this.caption) {
+      if (!this.buffer || !this.caption || !this.caption1) {
         alert('Please fill in the information.');
       } else {
         this.onSubmit();
