@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div style="display: flex; flex-direction: column;">
+    <div>
       <!-- Upload Interface -->
       <div id="upload">
         <div v-if="this.$root.$data.loading === false">
@@ -53,16 +53,13 @@
 
       <!-- Posts Interface -->
       <ul class="home-list">
-        <li
+        <li class="card-items"
           v-for="item in this.$root.$data.currentPosts"
           :key="item.key"
           :item="item"
         >
           <!-- Card UI for post's image & caption text -->
-          <b-card
-            border-variant="secondary"
-            :img-src="item.src"
-          >
+          <b-card :img-src="item.src">
             <p class="home-card-text">
               {{ item.caption }}
             </p>
@@ -174,20 +171,29 @@ export default {
 }
 
 .card img {
-  object-fit: cover;
-  height: 500px;
-  width: 500px;
-}
+  object-fit: contain;
 
-.card {
-  text-align: left;
-  width: 500px;
+}
+.card-items{
+  margin: 10px 20px;
+  box-shadow: 1px 1px 5px 0px #9e9e9e82;
+  border-radius: 2px;
+}
+.card { 
+  border: none;
+  text-align: center;
+    width: 250px;
+    height: 400px;
   margin-bottom: 20px;
 }
 
 
 .home-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
+  contain: content;
   list-style: none;
 }
 
