@@ -1,14 +1,4 @@
-# Instagram-like dApp
 
-A simple Ethereum-based [Instagram](https://www.instagram.com/)-like decentralized application (dapp) where you can post images, text, and view it.
-
-This repository is used in this Medium article:
-
-https://medium.com/@gdmerida.bit/https-medium-com-creating-an-instagram-like-dapp-with-ipfs-cc4fac85cbfe
-
----
-
-![Instagram](https://s2.gifyu.com/images/demo_50.gif)
 
 ## Prerequisites
 
@@ -48,20 +38,10 @@ And then do the same following commands as shown above for starting the applicat
 * [web3.js](https://github.com/ethereum/web3.js/) - Javascript library used to interact with the Ethereum blockchain
 * [IPFS](https://docs.ipfs.io/) - InterPlanetary File System for peer-to-peer decentralized data storage. 
 
-## openberry
+## blendit
 
 Anyone can become a blockchain engineer!
 
-**openberry** is a tutorial marketplace, designed to enable anyone to learn blockchain programming.
 
-**Website:**
-
-https://openberry.ac/
-
-**Medium:**
-
-https://medium.com/openberry
-
-**Twitter:**
 
 https://twitter.com/openberry_ac
