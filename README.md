@@ -34,6 +34,6 @@ Anyone can become a blockchain engineer!
 
 ##Team
 
-Aleesha Shaji
-Amrita Kuriakose
-Amala Rony
+* Aleesha Shaji
+* Amrita Kuriakose
+* Amala Rony
