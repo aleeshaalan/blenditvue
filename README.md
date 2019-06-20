@@ -1,6 +1,13 @@
 
 # # YouTube demo link
 https://youtu.be/SxxnNPlZkKA
+
+## paper published 
+Published the paper based on this project "decentralised land lending system using blockchain " in International journal of information systems and 
+Computer sciences (IJISCS)
+http://www.warse.org/IJISCS/static/pdf/file/ijiscs14822019.pdf
+
+
 ## Prerequisites
 
 * **Node** - v10.x.x (preferrably v10.15.0 for long term support)
